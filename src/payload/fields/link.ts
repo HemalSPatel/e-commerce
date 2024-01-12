@@ -117,6 +117,12 @@ const link: LinkType = ({ appearances, disableLabel = false, overrides = {} } = 
           },
         },
         //Time Stamp: 1:00:03
+        {
+          name: 'icon',
+          label: 'Icon',
+          type: 'upload',
+          relationTo: 'media',
+        }
       ],
     })
   } else {

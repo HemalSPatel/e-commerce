@@ -28,7 +28,7 @@
 
 html {
   @extend %body;
-  background: var(--theme-bg);
+  background: var(--theme-bg); // changing this will change the background (--theme-bg)
   -webkit-font-smoothing: antialiased;
   opacity: 0;
 
@@ -48,7 +48,7 @@ body {
   font-family: var(--font-jost);
   margin: 0;
   padding: 0;
-  color: var(--color-dark-500);
+  color: var(--color-dark-500); // --color-dark-500
 
   display: flex;
   flex-flow: column;
@@ -59,7 +59,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-dark-500);
+  background: var(--color-dark-500); // --color-dark-500
   color: var(--color-base-800);
 }
 
@@ -110,7 +110,8 @@ ol {
 }
 
 a {
-  color: var(--color-dark-500);
+  color: var(--color-dark-500); //
+  text-decoration: none;
 
   &:focus {
     opacity: .8;

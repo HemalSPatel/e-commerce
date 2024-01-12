@@ -35,7 +35,7 @@ export interface Page {
   title: string;
   publishedOn?: string;
   hero: {
-    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact';
+    type: 'none' | 'highImpact' | 'mediumImpact' | 'lowImpact' | 'customHero';
     richText: {
       [k: string]: unknown;
     }[];
@@ -49,6 +49,7 @@ export interface Page {
         };
         url: string;
         label: string;
+        icon?: string | Media;
         appearance?: 'default' | 'primary' | 'secondary';
       };
       id?: string;
@@ -71,6 +72,7 @@ export interface Page {
             };
             url: string;
             label: string;
+            icon?: string | Media;
             appearance?: 'primary' | 'secondary';
           };
           id?: string;
@@ -96,6 +98,7 @@ export interface Page {
             };
             url: string;
             label: string;
+            icon?: string | Media;
             appearance?: 'default' | 'primary' | 'secondary';
           };
           id?: string;
@@ -171,7 +174,8 @@ export interface Media {
 }
 export interface Category {
   id: string;
-  title?: string;
+  title: string;
+  media?: string | Media;
   parent?: string | Category;
   breadcrumbs?: {
     doc?: string | Category;
@@ -186,7 +190,7 @@ export interface Product {
   id: string;
   title: string;
   publishedOn?: string;
-  layout: (
+  layout?: (
     | {
         invertBackground?: boolean;
         richText: {
@@ -202,6 +206,7 @@ export interface Product {
             };
             url: string;
             label: string;
+            icon?: string | Media;
             appearance?: 'primary' | 'secondary';
           };
           id?: string;
@@ -227,6 +232,7 @@ export interface Product {
             };
             url: string;
             label: string;
+            icon?: string | Media;
             appearance?: 'default' | 'primary' | 'secondary';
           };
           id?: string;
@@ -294,6 +300,7 @@ export interface Product {
             };
             url: string;
             label: string;
+            icon?: string | Media;
             appearance?: 'primary' | 'secondary';
           };
           id?: string;
@@ -319,6 +326,7 @@ export interface Product {
             };
             url: string;
             label: string;
+            icon?: string | Media;
             appearance?: 'default' | 'primary' | 'secondary';
           };
           id?: string;
@@ -478,6 +486,7 @@ export interface Header {
       };
       url: string;
       label: string;
+      icon?: string | Media;
     };
     id?: string;
   }[];
@@ -497,6 +506,7 @@ export interface Footer {
       };
       url: string;
       label: string;
+      icon?: string | Media;
     };
     id?: string;
   }[];
