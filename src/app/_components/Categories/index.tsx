@@ -1,10 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-
-import { Category } from '../../../payload/payload-types'
-import CategoryCard from './CategoryCard'
-
-import classes from './index.module.scss'
+import React from 'react';
+import Link from 'next/link';
+import { Category } from '../../../payload/payload-types';
+import CategoryCard from './CategoryCard';
+import classes from './index.module.scss';
 
 const Categories = ({ categories }: { categories: Category[] }) => {
   return (
@@ -15,12 +13,12 @@ const Categories = ({ categories }: { categories: Category[] }) => {
       </div>
 
       <div className={classes.list}>
-        {categories.map(category => {
-          return <CategoryCard key={category.id} category={category} />
-        })}
+        {categories && categories.map(category => (
+          <CategoryCard key={category.id} category={category} />
+        ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Categories
+export default Categories;
