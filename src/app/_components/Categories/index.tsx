@@ -7,12 +7,6 @@ import CategoryCard from './CategoryCard'
 import classes from './index.module.scss'
 
 const Categories = ({ categories }: { categories: Category[] }) => {
-  if (!categories) {
-    // Handle the case where categories is null or undefined
-    return <p>Loading categories...</p>; // or you can return a loading state or an empty component
-  }
-  
-  
   return (
     <section className={classes.container}>
       <div className={classes.titleWrapper}>

@@ -1,6 +1,4 @@
 'use client'
-//because we are usinhg states and hooks we have to use client
-
 import React from 'react'
 import Link from 'next/link'
 

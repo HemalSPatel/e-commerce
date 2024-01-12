@@ -6,7 +6,7 @@
  * and re-run `payload generate:types` to regenerate this file.
  */
 
-export type CartItems = {
+ export type CartItems = {
   product?: string | Product;
   quantity?: number;
   id?: string;
