@@ -9,7 +9,7 @@ import classes from './index.module.scss'
 const Categories = ({ categories }: { categories: Category[] }) => {
   if (!categories) {
     // Handle the case where categories is null or undefined
-    return null; // or you can return a loading state or an empty component
+    return <p>Loading categories...</p>; // or you can return a loading state or an empty component
   }
   
   
