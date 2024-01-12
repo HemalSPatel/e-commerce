@@ -129,4 +129,4 @@ const CreateAccountForm: React.FC = () => {
   )
 }
 
-export default CreateAccountForm 
+export default CreateAccountForm

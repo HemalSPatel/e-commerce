@@ -5,13 +5,13 @@ import qs from 'qs'
 
 import { Product } from '../../../payload/payload-types'
 import type { ArchiveBlockProps } from '../../_blocks/ArchiveBlock/types'
+import { useFilter } from '../../_providers/Filter'
 import { Card } from '../Card'
 import { Gutter } from '../Gutter'
 import { PageRange } from '../PageRange'
 import { Pagination } from '../Pagination'
 
 import classes from './index.module.scss'
-import { useFilter } from '../../_providers/Filter'
 
 type Result = {
   totalDocs: number
@@ -161,12 +161,10 @@ export const CollectionArchive: React.FC<Props> = props => {
             />
           </div>
         )}
-        
+
         <div className={classes.grid}>
           {results.docs?.map((result, index) => {
-            return (
-              <Card relationTo="products" doc={result} showCategories />
-            )
+            return <Card relationTo="products" doc={result} showCategories />
           })}
         </div>
         {results.totalPages > 1 && (
@@ -177,7 +175,6 @@ export const CollectionArchive: React.FC<Props> = props => {
             onClick={setPage}
           />
         )}
-        
       </Fragment>
     </div>
   )

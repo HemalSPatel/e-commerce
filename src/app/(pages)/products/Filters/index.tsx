@@ -16,7 +16,7 @@ const Filters = ({ categories }: { categories: Category[] }) => {
   const handleCategories = (categoryId: string) => {
     if (categoryFilters.includes(categoryId)) {
       const updatedCategories = categoryFilters.filter(id => id !== categoryId)
-        //keeing everything else besides the one that we clicked on
+      //keeing everything else besides the one that we clicked on
       setCategoryFilters(updatedCategories)
     } else {
       setCategoryFilters([...categoryFilters, categoryId])
@@ -33,7 +33,8 @@ const Filters = ({ categories }: { categories: Category[] }) => {
           {categories.map(category => {
             const isSelected = categoryFilters.includes(category.id)
 
-            return ( //dynamic depending on categories you have
+            return (
+              //dynamic depending on categories you have
               <Checkbox
                 key={category.id}
                 label={category.title}
